@@ -1,1 +1,1 @@
-# learning-jsx-2
+# N-queens
