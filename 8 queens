@@ -1,1 +1,40 @@
-#In here will be the code for the 8 queens in python 
+#In here will be the code for the 8 queens in python
+#from itertools use only the permutations library
+from itertools import permutations
+
+def check_equality(combo, cols, num_queens):
+    #for each index i in the columns, finds the row value of that index and adds 1 to it
+    results_1=list()
+  for i in cols:
+      res=combo[i]+i
+      results_1.append(res)
+
+  val1=len(set(results_1)) #checks the length of the unique values from the prevent step
+
+    #for each index i in the columns, finds the row value of that index and take away 1 from it
+  results_2=list()
+  for i in cols:
+      res=combo[i]-i
+      results_2.append(res)
+
+   val2= len(set(results_2))
+
+   if val1 == val2 == num_queens: #this checks if the values are equal
+     return True
+   else:
+     return False
+#takes N number of queens and returns number of solutions
+def find_nqueen_solutions(n, return_solutions=False):
+    columns = range(n)
+    solutions = list()
+    for perm in permutations(columns):#gets every combo of the list
+      solution = check_equality(perm, columns, n)
+      if solution == True:
+        solutions.append(perm)
+      if return_solutions == True:
+        return solutions
+      else:
+        return len(solutions)
+# the return false is to check the exact pattern if you change it to True
+ results = find_nqueen_solutions(8, return_solutions=False)
+ print(results)
