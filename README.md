@@ -7,13 +7,15 @@
      press f5 to create the file and save the file
 
 After to check if the code works you can either run it in the terminal or directly in the idle3
- # In the terminal:
-  python (name of file)
+ # In the command line:
+  1. Fork and clone the repository 
+  2. Go to command line
+  3. In command line go into the folder you have the file in  
+  4.then run python stephanie.py
+    EXAMPLE:
+      python (name of file)
          ex: python LEARN.PY
- # In the idle3:
-    f5
-  # pop up
-    Enter
+         
 
 In the file it will show you the code running.
 Or if you install pyCharm you are also able to run your code step by step.
